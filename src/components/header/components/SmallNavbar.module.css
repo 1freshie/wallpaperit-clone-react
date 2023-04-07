@@ -1,0 +1,14 @@
+.searchIcon {
+  background: url(../../../assets/wallpaperit_sprite.png) no-repeat -50px -55px;
+  background-size: auto;
+}
+
+.wishlistIcon {
+  background: url(../../../assets/wallpaperit_sprite.png) no-repeat -6px -55px;
+  background-size: auto;
+}
+
+.bagIcon {
+  background: url(../../../assets/wallpaperit_sprite.png) no-repeat 0px -102px;
+  background-size: auto;
+}

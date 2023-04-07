@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import CloseIcon from "./CloseIcon";
+import styles from "./TopHeader.module.css";
 
 const TopHeader = () => {
   const [showTopHeader, setShowTopHeader] = useState(true);
@@ -19,7 +19,11 @@ const TopHeader = () => {
           <span className="font-avenir-book text-xs font-medium md:text-sm md:font-semibold lg:text-base lg:font-semibold uppercase cursor-pointer hover:underline hover:text-[#008FB2]">
             Easter Sale! Save 20% On Wallpaper*!
           </span>
-          <CloseIcon onClick={handleShowTopHeader} />
+          <div
+            id="close-icon"
+            className={`absolute w-10 h-10 right-4 cursor-pointer ${styles.closeIcon}`}
+            onClick={handleShowTopHeader}
+          ></div>
         </div>
       )}
     </>
