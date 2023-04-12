@@ -1,14 +1,4 @@
-.icon1 {
-  background: url(../../../assets/wallpaperit_sprite.png) no-repeat -75px -99px;
-  background-size: auto;
-}
-
-.icon2 {
-  background: url(../../../assets/wallpaperit_sprite.png) no-repeat -75px -99px;
-  background-size: auto;
-}
-
-.icon3 {
+.checkIcon {
   background: url(../../../assets/wallpaperit_sprite.png) no-repeat -75px -99px;
   background-size: auto;
 }
