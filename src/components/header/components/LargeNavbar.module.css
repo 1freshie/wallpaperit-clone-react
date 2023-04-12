@@ -1,0 +1,19 @@
+.icon1 {
+  background: url(../../../assets/wallpaperit_sprite.png) no-repeat -50px -55px;
+  background-size: auto;
+}
+
+.icon2 {
+  background: url(../../../assets/wallpaperit_sprite.png) no-repeat -113px -56px;
+  background-size: auto;
+}
+
+.icon3 {
+  background: url(../../../assets/wallpaperit_sprite.png) no-repeat -10px -57px;
+  background-size: auto;
+}
+
+.icon4 {
+  background: url(../../../assets/wallpaperit_sprite.png) no-repeat -5px -107px;
+  background-size: auto;
+}
