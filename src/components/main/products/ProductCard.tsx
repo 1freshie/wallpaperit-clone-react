@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 type ProductCardProps = {
   title: string;
   url: string;
+  price: number;
+  rating: number;
 };
 
 const ProductCard = (props: ProductCardProps) => {
@@ -20,15 +22,11 @@ const ProductCard = (props: ProductCardProps) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const { title, url } = props;
+  const { title, url, price, rating } = props;
 
   return (
     <article className="p-4 flex flex-col justify-center gap-y-4">
-      <img
-        src={url}
-        alt="Product Logo"
-        className="w-full h-full cursor-pointer"
-      />
+      <img src={url} alt={title} className="w-full h-full cursor-pointer" />
       <p className="cursor-pointer hover:underline text-base">
         {title.length > 20 ? `${title.slice(0, 20)}...` : title}
       </p>
@@ -48,12 +46,10 @@ const ProductCard = (props: ProductCardProps) => {
             </svg>
           ))}
         </div>
-        <p className="text-base">
-          {(Math.random() * 5).toFixed(1)}
-        </p>
+        <p className="text-base">{rating}</p>
       </div>
       <div className="w-full flex justify-between items-center">
-        <p className="text-base font-bold">£20.00</p>
+        <p className="text-base font-bold">£{price.toFixed(2)}</p>
         {!isMobile ? (
           <button className="underline cursor-pointer text-sm">
             Order example

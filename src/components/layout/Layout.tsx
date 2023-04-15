@@ -1,3 +1,4 @@
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -5,7 +6,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="w-full min-h-screen">
       <Header />
       <main className="h-full w-full">{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
