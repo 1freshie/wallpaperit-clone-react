@@ -17,15 +17,18 @@ const useFetchProducts = () => {
     const fetchData = async () => {
       setIsLoading(true);
 
-      const username = "ck_cbb0916f48c95cb8b699d995d56a19c4c0b8421a";
-      const password = "cs_cec97993f227407663733b4bc5687f1440452067";
+      const username = process.env.NEXT_PUBLIC_API_USERNAME;
+      const password = process.env.NEXT_PUBLIC_API_PASSWORD;
 
       const response = await fetch(
         "https://tues-store.dev.uxperience.eu/wp-json/wc/v3/products",
         {
           method: "GET",
           headers: {
-            Authorization: `Basic ${btoa(`${username}:${password}`)}`,
+            // Authorization: `Basic ${btoa(`${username}:${password}`)}`,
+            Authorization: `Basic ${Buffer.from(
+              `${username}:${password}`
+            ).toString("base64")}`,
             "Content-Type": "application/json",
           },
         }
